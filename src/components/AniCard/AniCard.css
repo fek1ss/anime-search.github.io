@@ -1,0 +1,60 @@
+.animeCard {
+  background-color: #1e1e1e;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+  width: 270px;
+  margin: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.animeCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.animeCard img {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #ff6347;
+}
+
+.animeCard h2 {
+  font-size: 1.5rem;
+  color: #ff6347;
+  margin: 15px 0;
+}
+
+.animeCard p {
+  font-size: 1rem;
+  color: #b0b0b0;
+}
+
+.animeCard button {
+  padding: 8px 15px;
+  border: none;
+  background-color: #ff6347;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+  margin-bottom: 15px;
+  width: 150px;
+}
+
+.animeCard button:hover {
+  transition: background-color 0.3 ease;
+  background-color: #ff4500;
+}
+
+.animeCard span{
+  cursor: pointer;
+  color: #ff4500;
+  font-size:smaller;
+}

@@ -1,0 +1,10 @@
+.anime-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+p{
+  text-align: center;
+}
