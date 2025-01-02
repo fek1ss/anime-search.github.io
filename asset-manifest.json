@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/anime-search/static/css/main.0cdf8570.css",
-    "main.js": "/anime-search/static/js/main.38d9a90e.js",
+    "main.js": "/anime-search/static/js/main.8975c020.js",
     "index.html": "/anime-search/index.html",
     "main.0cdf8570.css.map": "/anime-search/static/css/main.0cdf8570.css.map",
-    "main.38d9a90e.js.map": "/anime-search/static/js/main.38d9a90e.js.map"
+    "main.8975c020.js.map": "/anime-search/static/js/main.8975c020.js.map"
   },
   "entrypoints": [
     "static/css/main.0cdf8570.css",
-    "static/js/main.38d9a90e.js"
+    "static/js/main.8975c020.js"
   ]
 }
