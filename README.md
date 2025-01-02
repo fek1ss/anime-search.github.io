@@ -78,3 +78,8 @@ Anime Search is a React-based application that allows users to browse and search
 ## Future Enhancements
 - **Favorites List:** Allow users to save their favorite anime.
 - **Improved Styling:** Add responsive design and animations.
+
+
+# Live Demo
+
+Check out the live version of the project here: [Anime Search](https://fek1ss.github.io/anime-search.github.io/)
