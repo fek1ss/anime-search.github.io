@@ -20,8 +20,8 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
         type="text"
         placeholder="Search anime..."
         value={query}
-        onChange={(e) => setQuery(e.target.value)} // Локальное обновление состояния
-        onKeyDown={(e) => e.key === 'Enter' && handleSearch()} // Отправка при Enter
+        onChange={(e) => setQuery(e.target.value)} 
+        onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
       />
       <button onClick={handleSearch}>Search</button>
     </div>

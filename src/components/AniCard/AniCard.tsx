@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import useModal from '../../hooks/useModal.tsx';
 import Modal from '../../components/Modal/Modal.tsx';
 import './AniCard.css';
