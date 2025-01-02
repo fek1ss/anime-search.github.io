@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/anime-search/static/css/main.0cdf8570.css",
+    "main.js": "/anime-search/static/js/main.bd8c44fd.js",
+    "index.html": "/anime-search/index.html",
+    "main.0cdf8570.css.map": "/anime-search/static/css/main.0cdf8570.css.map",
+    "main.bd8c44fd.js.map": "/anime-search/static/js/main.bd8c44fd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0cdf8570.css",
+    "static/js/main.bd8c44fd.js"
+  ]
+}
