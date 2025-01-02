@@ -1,16 +1,21 @@
-import React from 'react';
-import './Pagination.css';
+import React from "react";
 
-export default function Pagination({currentPage, totalPages, onPageChange}){
+interface PaginationProps {
+  currentPage: number;
+  totalPages: number;
+  onPageChange: (page: number) => void;
+}
+
+const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPageChange }) => {
   const handlePrev = () => {
-    if(currentPage > 1) onPageChange(currentPage - 1);
-  }
+    if (currentPage > 1) onPageChange(currentPage - 1);
+  };
 
   const handleNext = () => {
-    if(currentPage < totalPages) onPageChange(currentPage + 1);
-  }
+    if (currentPage < totalPages) onPageChange(currentPage + 1);
+  };
 
-  return(
+  return (
     <div className="pagination">
       <button onClick={handlePrev} disabled={currentPage === 1}>
         Previous
@@ -22,5 +27,7 @@ export default function Pagination({currentPage, totalPages, onPageChange}){
         Next
       </button>
     </div>
-  )
-}
+  );
+};
+
+export default Pagination;

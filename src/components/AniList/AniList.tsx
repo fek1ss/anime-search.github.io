@@ -19,7 +19,7 @@ interface AnimeProps {
 
 const AniList: React.FC<AnimeProps> = ({ anime }) => {
   if(!anime.length){
-    <p>No anime found</p>
+    return <p>No anime found</p>
   }
 
   return(
