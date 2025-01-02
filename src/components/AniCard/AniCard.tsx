@@ -21,8 +21,6 @@ interface AnimeProps {
 }
 
 const AniCard:React.FC<AnimeProps> = ({ anime }) => {
-  const [isExpanded, setIsExpanded] = 
-    useState<boolean>(false);
   const { isOpen, toggle } = useModal();
 
   if(!anime.synopsis) return <p>No data available</p>;
@@ -31,9 +29,6 @@ const AniCard:React.FC<AnimeProps> = ({ anime }) => {
     ? anime.images.jpg.image_url 
     : 'https://via.placeholder.com/500x750?text=No+Image';
 
-  // const toggleSynopsis = () =>{
-  //   setIsExpanded(prev => !prev);
-  // }
 
   return (
       <div className="animeCard">
