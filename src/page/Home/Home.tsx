@@ -17,6 +17,11 @@ interface Anime {
   };
 }
 
+interface AnimeProps {
+  favorites: Anime[];
+  setFavorites: React.Dispatch<React.SetStateAction<Anime[]>>;
+}
+
 interface Error {
   status_message: string;
 }
@@ -29,7 +34,7 @@ interface ApiResponse extends Error{
 }
 
 
-const Home = () => {
+const Home:React.FC<AnimeProps> = ({favorites, setFavorites}) => {
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [anime, setAnime] = useState<Anime[]>([]);
   const [currentPage, setCurrentPage] = useState<number>(1);
@@ -71,6 +76,17 @@ const Home = () => {
     fetchAnime();
   }, [searchQuery, currentPage]);
 
+
+  const addToFavorites = (anime: Anime)=> {
+    setFavorites((prevF) => {
+      const isFavorite = prevF.some((fav) => fav.mal_id === anime.mal_id);
+      if(isFavorite)
+        return prevF.filter((fav)=> fav.mal_id !== anime.mal_id);
+      else
+        return [...prevF, anime];
+    })
+  }
+
   return(
     <div className='Home'>
       <SearchBar onSearch={setSearchQuery} />
@@ -78,7 +94,11 @@ const Home = () => {
       
       {isLoading 
       ? <div className="loader"></div> 
-      : (<AniList anime={anime} />)}
+      : (<AniList 
+        addToFavorites={addToFavorites}  
+        favorites={favorites}
+        anime={anime} 
+        />)}
 
       {totalPages > 1 && (
         <Pagination 

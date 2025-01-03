@@ -18,10 +18,15 @@ interface Anime {
 
 interface AnimeProps {
   anime: Anime;
+  addToFavorites?: (anime: Anime)=> void;
+  favorites: Anime[];
+  onRemove?: (ani: Anime)=> void;
 }
 
-const AniCard:React.FC<AnimeProps> = ({ anime }) => {
+const AniCard:React.FC<AnimeProps> = ({ anime, addToFavorites, favorites, onRemove }) => {
   const { isOpen, toggle } = useModal();
+  const isFavorite = favorites.some((fav) => fav.mal_id === anime.mal_id);
+
 
   if(!anime.synopsis) return <p>No data available</p>;
 
@@ -29,6 +34,7 @@ const AniCard:React.FC<AnimeProps> = ({ anime }) => {
     ? anime.images.jpg.image_url 
     : 'https://via.placeholder.com/500x750?text=No+Image';
 
+  
 
   return (
       <div className="animeCard">
@@ -48,7 +54,16 @@ const AniCard:React.FC<AnimeProps> = ({ anime }) => {
           {anime.synopsis}
         </Modal>
   
-        <button>Add to Favorites</button>
+        {addToFavorites && (
+        <button onClick={() => addToFavorites(anime)}>
+          {isFavorite ? 'Remove from favorites' : 'Add to Favorite'}
+        </button>
+        )}
+        {onRemove && (
+        <button className="remove-btn" onClick={()=> onRemove?.(anime)}>
+          Remove
+        </button>
+      )}
         </div>
       );
 }

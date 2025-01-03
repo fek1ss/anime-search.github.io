@@ -14,10 +14,12 @@ interface Anime {
 }
 
 interface AnimeProps {
-  anime: Anime[];
+  anime: Anime[];   
+  addToFavorites: (anime: Anime)=> void;
+  favorites: Anime[];
 }
 
-const AniList: React.FC<AnimeProps> = ({ anime }) => {
+const AniList: React.FC<AnimeProps> = ({ anime, addToFavorites, favorites }) => {
   if(!anime.length){
     return <p>No anime found</p>
   }
@@ -26,6 +28,8 @@ const AniList: React.FC<AnimeProps> = ({ anime }) => {
     <div className="anime-list">
       {anime.slice(0,8).map((ani) => (
         <AniCard 
+        addToFavorites={addToFavorites}
+        favorites={favorites}
         key={ani.mal_id} 
         anime={ani}
         />
