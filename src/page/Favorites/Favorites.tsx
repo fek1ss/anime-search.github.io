@@ -1,6 +1,6 @@
 import React from 'react';
 import './Favorites.css';
-import AniCard from '../../../components/AniCard/AniCard.tsx';
+import AniCard from '../../components/AniCard/AniCard.tsx';
 
 
 interface Anime {

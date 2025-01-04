@@ -4,8 +4,8 @@ import React, { useState } from 'react';
 import './App.css';
 import Home from './page/Home/Home.tsx';
 import Header from './components/Header/Header.tsx';
-import Favorites from './page/Home/Favorites/Favorites.tsx';
-import About from './page/Home/About/About.tsx';
+import Favorites from './page/Favorites/Favorites.tsx';
+import About from './page/About/About.tsx';
 
 
 interface Anime {

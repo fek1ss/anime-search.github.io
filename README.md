@@ -46,7 +46,7 @@ Anime Search is a React-based application that allows users to browse and search
 
 4. Start the development server:
     ```
-    npm start
+    npm run start
     ```
 
 5. Open the application in your browser at http://localhost:3000.
@@ -74,11 +74,6 @@ Anime Search is a React-based application that allows users to browse and search
   │   └── Home/
   └── App.tsx
 ```
-
-## Future Enhancements
-- **Favorites List:** Allow users to save their favorite anime.
-- **Improved Styling:** Add responsive design and animations.
-
 
 # Live Demo
 
