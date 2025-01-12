@@ -36,3 +36,14 @@
 .search-bar button:hover {
   background-color: #ff4500;
 }
+
+
+@media (max-width: 640px) {
+  .search-bar input{
+    width: 200px;
+  }
+
+  .search-bar button {
+    padding: 5px 15px;
+  }
+}

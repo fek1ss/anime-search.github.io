@@ -25,3 +25,14 @@ nav a {
 nav a:hover {
   color: #ff6347;
 }
+
+
+@media (max-width: 640px) {
+  header{
+    padding: 10px 0;
+  }
+
+  nav li{
+    font-size: 1rem;
+  }
+}

@@ -25,3 +25,12 @@
 .modal-box p{
   color: rgb(255, 255, 255);
 }
+
+
+@media (max-width: 640px){
+  .modal-box{
+    height: 450px;
+    width: 250px;
+    overflow: auto;
+  }
+}

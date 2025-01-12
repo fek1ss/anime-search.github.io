@@ -8,3 +8,13 @@
 p{
   text-align: center;
 }
+
+@media (max-width: 640px){
+  .anime-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  
+}
