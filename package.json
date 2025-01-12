@@ -1,7 +1,7 @@
 {
   "name": "anime-search",
   "version": "0.1.0",
-  "homepage": "https://fek1ss.github.io/anime-search",
+  "homepage": "https://anime-search-seven.vercel.app/",
   "private": true,
   "dependencies": {
     "cra-template-typescript": "1.2.0",
